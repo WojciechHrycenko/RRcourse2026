@@ -68,3 +68,17 @@ ggplot(suits_data[-1, ], aes(x = factor(Season), y = Change)) +
   theme_minimal() +
   labs(x = "Season", y = "Change in Viewers (Millions)")
 ```
+
+# Summary
+
+```{r}
+#| label: inline-calc
+#| include: false
+
+# Calculate numbers for the inline summary
+s1_viewers <- suits_data$Viewers[1]
+s9_viewers <- suits_data$Viewers[9]
+total_drop <- round(s1_viewers - s9_viewers, 2)
+```
+
+The show started with a strong audience of `r s1_viewers` million viewers in the first season. However, there was a consistent decline over the years. By the final season, the average viewership had decreased by `r total_drop` million viewers, concluding with an average of `r s9_viewers` million viewers in Season 9.
