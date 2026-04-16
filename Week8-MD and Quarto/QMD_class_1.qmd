@@ -28,3 +28,21 @@ library(dplyr)
 *Suits* is an American legal drama television series created and written by Aaron Korsh. The series premiered on USA Network on June 23, 2011, and concluded on September 25, 2019. It follows Mike Ross, who starts working as a law associate for Harvey Specter despite never having attended law school.
 
 ![Suits Logo](https://upload.wikimedia.org/wikipedia/commons/1/13/Suits_Logo.png)
+
+# Viewership Statistics
+
+```{r}
+#| label: data-prep
+seasons <- 1:9
+viewers <- c(4.28, 3.60, 2.73, 2.26, 2.01, 1.60, 1.30, 1.07, 0.96)
+suits_data <- data.frame(Season = seasons, Viewers = viewers)
+
+# Calculate season-to-season change
+suits_data <- suits_data |>
+  mutate(Change = Viewers - lag(Viewers))
+```
+
+```{r}
+#| label: stats-table
+kable(suits_data, col.names = c("Season", "Viewership (Millions)", "Change"), caption = "Suits Viewership by Season")
+```
