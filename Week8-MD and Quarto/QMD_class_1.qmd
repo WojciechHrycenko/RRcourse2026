@@ -1,7 +1,7 @@
 ---
 title: "Quarto — Class 1: Suits Viewership"
-author: "Wojciech Hardy"
-date: "04/09/2023"
+author: "Wojciech Hrycenko"
+date: "16/04/2026"
 format:
   html:
     toc: true
@@ -27,7 +27,7 @@ library(dplyr)
 
 *Suits* is an American legal drama television series created and written by Aaron Korsh. The series premiered on USA Network on June 23, 2011, and concluded on September 25, 2019. It follows Mike Ross, who starts working as a law associate for Harvey Specter despite never having attended law school.
 
-![Suits Logo](https://upload.wikimedia.org/wikipedia/commons/1/13/Suits_Logo.png)
+![Suits Logo](https://upload.wikimedia.org/wikipedia/commons/c/cc/Suits_Logo.png)
 
 # Viewership Statistics
 
